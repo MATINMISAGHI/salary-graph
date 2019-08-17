@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+    <head>
+        <meta charset = "utf8" />
+        <link rel="stylesheet" href="./css/site.css">
+        <title> Salary Graph </title>
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <h1> Tech Salary Comparison </h1>
+                <p> Average from Indeed.com covering San Francisco Bay Area <br>
+                    August 2019 </p>
+            </div>
+        </header>
+        <main>
+            <!-- write salaries and place them in a conrainer -->
+            <div class="AllGraphs">
+                <div class = "MainContainer MainContainer-box1" onClick = "alert('Salary for this job is: $116K')">
+                    <h4> Front End Developer <> $$$ <> </h4>
+                    <!-- $116K -->
+                </div>
+                <div class = "MainContainer MainContainer-box2" onClick = "alert('Salary for this job is: $90K')">
+                    <h4> Web Developer <> $$ <></h4>
+                    <!-- $90K -->
+                </div>
+                <div class = " MainContainer MainContainer-box3" onClick = "alert('Salary for this job is: $70K')">
+                    <h4> Junior Front End Developer <> $$ <></h4>
+                    <!-- $70K -->
+                </div>
+                <div class = "MainContainer MainContainer-box4" onClick = "alert('Salary for this job is: $145K')"> 
+                    <h4> Senior Software Engineer <> $$$ <></h4>
+                    <!-- $145K -->
+                </div>
+                <div class = "MainContainer MainContainer-box5" onClick = "alert('Salary for this job is: $142K')">
+                    <h4> Development Operations Engineer <> $$$ <></h4>
+                    <!-- $142K -->
+                </div>
+                <div class = "MainContainer MainContainer-box6" onClick = "alert('Salary for this job is: $137K')">
+                    <h4> Data Scientist <> $$$ <></h4>
+                    <!-- $137K -->
+                </div>
+                
+                <!-- specify the length of the graph bars compared to an income of $200K -->
+                <style>
+                    .MainContainer-box1 {
+                        width: 58%;
+                    }
+                    .MainContainer-box2 {
+                        width: 45%;
+                    }
+                    .MainContainer-box3 {
+                        width: 35%;
+                    }
+                    .MainContainer-box4 {
+                        width: 72.5%;
+                    }
+                    .MainContainer-box5 {
+                        width: 71%;
+                    }
+                    .MainContainer-box6 {
+                        width: 68.5%;
+                    }
+                </style>
+            </div>
+        </main>
+    </body>
+</html>

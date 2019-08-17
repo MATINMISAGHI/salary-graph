@@ -1,0 +1,68 @@
+/* make a grid to place the title and the graph in their position */
+body {
+    display: grid;
+    grid-template-columns: 200px  1fr 200px;
+    grid-template-rows: 250px 1fr;
+    background:#b2cdf8;
+}
+/* place the title of the page on the top left */
+header {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #b2cdf8;
+    padding: 10px;
+    margin: 30px;
+    height: 110px;
+    width: 28vw;
+    border: ridge 2px;
+}
+/* position the graphs in the bottom middle of the the page */
+main {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 30px;
+    background-color: lightskyblue;
+}
+/* make another grid inside the parent grid to space out the bars */
+.AllGraphs {
+   display: grid;
+   grid-gap: 7px;
+   border-bottom: ridge rgb(182, 170, 170) 35pt;
+   border-left: ridge rgb(182, 170, 170) 35pt;
+   box-shadow: 1px 3px 7px 3px black;
+}
+/* create flex boxes, center them and give the bars shadow */
+.MainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: outset;
+    box-shadow: 1px 3px 10px 1px black;
+    border-bottom: solid .5pt;
+    border-left: solid 2pt;
+}
+/* apply some CSS magic, color the bars */
+.MainContainer:nth-of-type(even) {
+   background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+}
+.MainContainer:nth-of-type(odd) {
+        background-color: turquoise;
+}
+/* transormation and animation */
+.MainContainer:hover{
+    /* transform: ; */
+    animation: Grow .3s;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes Grow {
+      from {
+          transform: translate3d(0, 0, 0);
+      }
+
+      to {
+          transform: translate3d(30px, 7px, 0);
+      }
+}
